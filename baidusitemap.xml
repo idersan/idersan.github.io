@@ -4,39 +4,19 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/04/24/%E5%B7%A5%E9%95%BF%E7%AB%AF-%E5%8C%A0%E4%BA%BA%E7%AB%AFV1-0-3%E5%8F%91%E5%B8%83/</loc>
-    <lastmod>2017-04-25T03:36:57.733Z</lastmod>
+    <loc>http://yoursite.com/2017/05/03/hexo-win10%E4%B8%8B%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2017-05-03T10:52:22.774Z</lastmod>
     <data>
         <display>
-        <title>工长端,匠人端V1.0.3发布</title>
-        <pubTime>2017-04-24T09:43:22.000Z</pubTime>
+        <title>hexo win10下安装</title>
+        <pubTime>2017-05-03T06:22:52.000Z</pubTime>
         
-        <tag>应用</tag>
+        <tag>hexo</tag>
          
          
            
              
-              <breadCrumb title="锋尚移动应用市场" url="http://yoursite.com/categories/appsmarket/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/04/23/hello-world/</loc>
-    <lastmod>2017-04-24T09:17:59.105Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-04-23T12:16:20.191Z</pubTime>
-        
-        <tag>HEXO</tag>
-         
-         
-           
-             
-              <breadCrumb title="博客" url="http://yoursite.com/categories/blog/"/>
+              <breadCrumb title="博客hexo" url="http://yoursite.com/categories/hexo/"/>
           
         </display>
     </data>
