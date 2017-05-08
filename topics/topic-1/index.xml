@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Topic 1 on 二三</title>
-    <link>/topics/topic-1/</link>
+    <link>https://idersan.github.io/topics/topic-1/</link>
     <description>Recent content in Topic 1 on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Mon, 08 May 2017 21:38:01 +0800</lastBuildDate>
     
-	<atom:link href="/topics/topic-1/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://idersan.github.io/topics/topic-1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>/2017/05/08/getting-started-with-hugo/</link>
+      <link>https://idersan.github.io/2017/05/08/getting-started-with-hugo/</link>
       <pubDate>Mon, 08 May 2017 21:38:01 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>/2017/05/08/getting-started-with-hugo/</guid>
+      <guid>https://idersan.github.io/2017/05/08/getting-started-with-hugo/</guid>
       <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at installing hugo
