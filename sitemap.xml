@@ -1,18 +1,140 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://yoursite.com/2017/05/03/hexo-win10%E4%B8%8B%E5%AE%89%E8%A3%85/</loc>
-    
-    <lastmod>2017-05-04T05:37:29.835Z</lastmod>
-    
+    <loc>/2017/05/08/getting-started-with-hugo/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    
-    <lastmod>2017-04-24T03:27:51.792Z</lastmod>
-    
+    <loc>/2017/05/08/how-to-use-hexo-build-a-blog/</loc>
+    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/disclaimer/</loc>
+    <lastmod>2017-05-05T14:55:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/terms/</loc>
+    <lastmod>2017-05-05T14:55:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/license/</loc>
+    <lastmod>2017-05-05T14:51:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/about-me/</loc>
+    <lastmod>2017-05-05T14:50:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/04/24/what-is-hugo/</loc>
+    <lastmod>2016-04-24T02:50:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/04/21/introduction/</loc>
+    <lastmod>2016-04-21T02:50:28+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/development/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/development/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/go/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/golang/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/golang/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hexo/</loc>
+    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/topics/hexo-blog/</loc>
+    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/page/</loc>
+    <lastmod>2017-05-05T14:55:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/topics/topic-1/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/topics/</loc>
+    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

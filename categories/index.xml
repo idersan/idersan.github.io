@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 二三的博客</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on 二三的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>idersan@outlook.com (二三)</managingEditor>
+    <webMaster>idersan@outlook.com (二三)</webMaster>
+    <copyright>(c) 2017 Copyright 二三</copyright>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Development</title>
+      <link>/categories/development/</link>
+      <pubDate>Mon, 08 May 2017 21:38:01 +0800</pubDate>
+      <author>idersan@outlook.com (二三)</author>
+      <guid>/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>/categories/golang/</link>
+      <pubDate>Mon, 08 May 2017 21:38:01 +0800</pubDate>
+      <author>idersan@outlook.com (二三)</author>
+      <guid>/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客</title>
+      <link>/categories/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 08 May 2017 21:37:26 +0800</pubDate>
+      <author>idersan@outlook.com (二三)</author>
+      <guid>/categories/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
