@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>二三</title>
-    <link>https://idersan.github.com/</link>
+    <link>/</link>
     <description>Recent content on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Mon, 08 May 2017 21:37:26 +0800</lastBuildDate>
     
-	<atom:link href="https://idersan.github.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hexo博客搭建</title>
-      <link>https://idersan.github.com/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <link>/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Mon, 08 May 2017 21:37:26 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.com/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <guid>/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
       <description>hexo 博客在windows 10下快速搭建步骤：
 0x1 安装tortoisegit。  1.1 新建Repository yourname.github.io。
 1.2 开通 page 服务。
@@ -32,37 +32,37 @@ $ npm config set prefix &amp;quot;C:\Program Files\nodejs\node_global&amp;quot; 
     
     <item>
       <title>Disclaimer</title>
-      <link>https://idersan.github.com/page/disclaimer/</link>
+      <link>/page/disclaimer/</link>
       <pubDate>Fri, 05 May 2017 14:55:07 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.com/page/disclaimer/</guid>
+      <guid>/page/disclaimer/</guid>
       <description>Disclaimer  Your disclaimer text here NOTE:Some information in this website might be copied from other websites. If you see something is your copyright or something should not belong here, please feel free to contact me. I will remove necessary parts.     </description>
     </item>
     
     <item>
       <title>Disclaimer</title>
-      <link>https://idersan.github.com/page/terms/</link>
+      <link>/page/terms/</link>
       <pubDate>Fri, 05 May 2017 14:55:07 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.com/page/terms/</guid>
+      <guid>/page/terms/</guid>
       <description> Headline LICENSE  Unless otherwise mentioned code from this blog can used as per MIT or Apache 2.0 terms.     </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://idersan.github.com/page/license/</link>
+      <link>/page/license/</link>
       <pubDate>Fri, 05 May 2017 14:51:49 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.com/page/license/</guid>
+      <guid>/page/license/</guid>
       <description>LICENSE  Unless otherwise mentioned code from this blog can used as per MIT or Apache 2.0 license.     </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://idersan.github.com/page/about-me/</link>
+      <link>/page/about-me/</link>
       <pubDate>Fri, 05 May 2017 14:50:40 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.com/page/about-me/</guid>
+      <guid>/page/about-me/</guid>
       <description> idersan@outlook.com QQ:1410478343 </description>
     </item>
     
