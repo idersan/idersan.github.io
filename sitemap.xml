@@ -3,136 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://idersan.github.io/2017/05/08/getting-started-with-hugo/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/2017/05/08/how-to-use-hexo-build-a-blog/</loc>
+    <loc>https://idersan.github.com/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2017-05-08T21:37:26+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/page/disclaimer/</loc>
+    <loc>https://idersan.github.com/page/disclaimer/</loc>
     <lastmod>2017-05-05T14:55:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/page/terms/</loc>
+    <loc>https://idersan.github.com/page/terms/</loc>
     <lastmod>2017-05-05T14:55:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/page/license/</loc>
+    <loc>https://idersan.github.com/page/license/</loc>
     <lastmod>2017-05-05T14:51:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/page/about-me/</loc>
+    <loc>https://idersan.github.com/page/about-me/</loc>
     <lastmod>2017-05-05T14:50:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/2016/04/24/what-is-hugo/</loc>
-    <lastmod>2016-04-24T02:50:28+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/2016/04/21/introduction/</loc>
-    <lastmod>2016-04-21T02:50:28+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/categories/</loc>
+    <loc>https://idersan.github.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/categories/development/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/tags/development/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/tags/go/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/categories/golang/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/tags/golang/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/tags/hexo/</loc>
+    <loc>https://idersan.github.com/tags/hexo/</loc>
     <lastmod>2017-05-08T21:37:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/topics/hexo-blog/</loc>
-    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/tags/hugo/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/page/</loc>
+    <loc>https://idersan.github.com/page/</loc>
     <lastmod>2017-05-05T14:55:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/post/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/tags/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/topics/topic-1/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://idersan.github.io/topics/</loc>
+    <loc>https://idersan.github.com/post/</loc>
     <lastmod>2017-05-08T21:37:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/</loc>
-    <lastmod>2017-05-08T21:38:01+08:00</lastmod>
+    <loc>https://idersan.github.com/tags/</loc>
+    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://idersan.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://idersan.github.com/topics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://idersan.github.com/</loc>
     <lastmod>2017-05-08T21:37:26+08:00</lastmod>
     <priority>0</priority>
   </url>

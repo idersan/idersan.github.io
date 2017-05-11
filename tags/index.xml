@@ -2,60 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 二三</title>
-    <link>https://idersan.github.io/tags/</link>
+    <link>https://idersan.github.com/tags/</link>
     <description>Recent content in Tags on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <managingEditor>idersan@outlook.com (二三)</managingEditor>
     <webMaster>idersan@outlook.com (二三)</webMaster>
     <copyright>(c) 2017 Copyright 二三</copyright>
-    <lastBuildDate>Mon, 08 May 2017 21:38:01 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 May 2017 21:37:26 +0800</lastBuildDate>
     
-	<atom:link href="https://idersan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://idersan.github.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Development</title>
-      <link>https://idersan.github.io/tags/development/</link>
-      <pubDate>Mon, 08 May 2017 21:38:01 +0800</pubDate>
-      <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://idersan.github.io/tags/go/</link>
-      <pubDate>Mon, 08 May 2017 21:38:01 +0800</pubDate>
-      <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://idersan.github.io/tags/golang/</link>
-      <pubDate>Mon, 08 May 2017 21:38:01 +0800</pubDate>
-      <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Hexo</title>
-      <link>https://idersan.github.io/tags/hexo/</link>
+      <link>https://idersan.github.com/tags/hexo/</link>
       <pubDate>Mon, 08 May 2017 21:37:26 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/tags/hexo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://idersan.github.io/tags/hugo/</link>
-      <pubDate>Mon, 08 May 2017 21:38:01 +0800</pubDate>
-      <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/tags/hugo/</guid>
+      <guid>https://idersan.github.com/tags/hexo/</guid>
       <description></description>
     </item>
     
