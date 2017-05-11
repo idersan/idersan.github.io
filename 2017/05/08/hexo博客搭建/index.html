@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>hexo博客搭建  &middot; 二三</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="hexo, how to use hexo build a blog, ">
+
+<link rel="author" href="http://plus.google.com/+Myprofile">
+
+
+<meta property="og:title" content="hexo博客搭建  &middot; 二三 ">
+<meta property="og:site_name" content="二三"/>
+<meta property="og:url" content="https://idersan.github.com/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+<meta property="og:locale" content="zh-CN">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2017-05-08T21:37:26&#43;08:00" />
+<meta property="og:article:modified_time" content="2017-05-08T21:37:26&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="hexo">
+    
+<meta property="og:article:tag" content="how to use hexo build a blog">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Myprofile" />
+<meta name="twitter:creator" content="@Myprofile" />
+<meta name="twitter:title" content="hexo博客搭建" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="https://idersan.github.com/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+<meta name="twitter:domain" content="https://idersan.github.com">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "hexo博客搭建",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+Myprofile?rel=author"
+    },
+    "datePublished": "2017-05-08",
+    "description": "",
+    "wordCount": 222
+  }
+</script>
+
+
+
+<link rel="canonical" href="https://idersan.github.com/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://idersan.github.com/touch-icon-144-precomposed.png">
+<link rel="icon" href="https://idersan.github.com/favicon.png">
+<meta name="generator" content="Hugo 0.21-DEV" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="https://idersan.github.com/css/bootswatch/paper/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://idersan.github.com/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://idersan.github.com/css/style.css">
+
+
+  <link rel="stylesheet" href="https://idersan.github.com/css/highlight/dark.css">
+
+
+</head>
+<body class="map[name:paper]" data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="https://idersan.github.com/">
+            <img alt="二三" src="https://idersan.github.com/images/brandimg.jpg">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+
+              <a href="https://idersan.github.com/post/" >
+                <i class='fa fa-list'></i>
+                博客
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://idersan.github.com/categories/" >
+                <i class='fa fa-folder-open'></i>
+                分类
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://idersan.github.com/tags/" >
+                <i class='fa fa-tags'></i>
+                标签
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://idersan.github.com/page/about-me" >
+                <i class='fa fa-info-circle'></i>
+                关于我
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>hexo博客搭建
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2017-05-08">8 May, 2017</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 2 min
+  &middot; (222 words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="https://idersan.github.com/tags/hexo" class="label label-primary">hexo</a>
+  
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  
+
+<p>hexo 博客在windows 10下快速搭建步骤：</p>
+
+<h3 id="0x1-安装tortoisegit">0x1 安装tortoisegit。</h3>
+
+<blockquote>
+<p>1.1 新建Repository yourname.github.io。<br />
+  1.2 开通 page 服务。<br />
+  1.3 本地新建index.html(hello world) push到username.github.io</p>
+
+<pre><code class="language-html">  &lt;!DOCTYPE HTML&gt;
+  &lt;html&gt;
+   &lt;head&gt;
+	  &lt;title&gt;yourname's Blog&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;h1&gt;Hello World&lt;/h1&gt;
+     &lt;p&gt;I'm hosted with GitHub Paes&lt;/p&gt;
+   &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre>
+
+<p>1.4 访问yourname.github.io 可以看到helloworld。</p>
+</blockquote>
+
+<h3 id="0x2-安装nodejs">0x2 安装nodejs</h3>
+
+<blockquote>
+<p>2.1 <a href="http://nodejs.org">http://nodejs.org</a> 下载安装文件，点击安装。
+2.2 配置npm的全局模块的存放路径以及cache的路:</p>
+
+<pre><code class="language-bash">  $ npm config set prefix &quot;C:\Program Files\nodejs\node_global&quot; 
+  $ npm config set cache &quot;C:\Program Files\nodejs\node_cache&quot; 
+</code></pre>
+
+<p>2.3 设置环境变量 NODEPATH=C:\Program Files\nodejs\node_global</p>
+</blockquote>
+
+<h3 id="0x3-安装hexo">0x3 安装hexo</h3>
+
+<blockquote>
+<p>3.1 新建一个hexo目录，不带中文，不带空格。
+ 3.2 打开git bash，cd到hexo。</p>
+
+<h4 id="方法a-使用默认源安装">方法A 使用默认源安装</h4>
+
+<pre><code>    $ npm install hexo-cli -g 
+</code></pre>
+
+<p>方法A可执行，则忽略以下方法B</p>
+
+<h4 id="方法b-使用淘宝源安装">方法B 使用淘宝源安装</h4>
+
+<pre><code>    $ npm install -g hexo-cli --registry=https://registry.npm.taobao.org 
+    $ cnpm install  //淘宝镜像安装
+    $ npm install hexo --save
+</code></pre>
+
+<p>3.3 查看本地hexo是否安装正确</p>
+
+<pre><code>  $ hexo -v
+  $ hexo init //如果出错忽略，直接输入下一步命令会自动安装需要的组件。
+  $ hexo g
+  $ hexo s //浏览器打开  http://localhost:4000/
+</code></pre>
+</blockquote>
+
+<h3 id="0x4-修改hexo主题">0x4 修改hexo主题</h3>
+
+<blockquote>
+<p>在<a href="https://hexo.io/themes/">https://hexo.io/themes/</a> 查找中意的theme项目, 点进去找到 github项目,
+  之后按照theme 提示安装。
+  示例安装 <a href="https://github.com/chaooo/hexo-theme-BlueLake">https://github.com/chaooo/hexo-theme-BlueLake</a></p>
+
+<pre><code class="language-bash">  $ git clone https://github.com/chaooo/hexo-theme-BlueLake.git themes/BlueLake 
+</code></pre>
+</blockquote>
+
+<h3 id="0x5-安装完成后分别执行">0x5 安装完成后分别执行</h3>
+
+<pre><code>  $ hexo clean
+  $ hexo g
+  $ hexo d
+  $ hexo s //浏览器打开  http://localhost:4000/ 已经是新主题了
+</code></pre>
+
+<h3 id="0x6-配置deployment">0x6 配置Deployment</h3>
+
+<blockquote>
+<p>6.1 git bash配置身份信息:</p>
+
+<pre><code>  $ git config --global user.name &quot;yourname&quot;
+  $ git config --global user.email &quot;youremail&quot; 
+</code></pre>
+
+<p>6.2 在_config.yml文件中，找到Deployment，然后按照如下修改：</p>
+
+<pre><code>     deploy:
+       type: git
+       repo: git@github.com:yourname/yourname.github.io.git
+     branch: master
+</code></pre>
+
+<pre><code>  上面的四个:对齐且type: repo: branch: 后面有空格.
+</code></pre>
+
+<p>6.3 安装所需插件</p>
+
+<pre><code>  $ npm install hexo-deployer-git --save
+</code></pre>
+
+<p>6.4 发布项目</p>
+
+<pre><code>  $ hexo d //出现错误信息则说明git bash没有配置ssh。
+</code></pre>
+</blockquote>
+
+<h3 id="0x7-配置ssh">0x7 配置ssh</h3>
+
+<blockquote>
+<p>7.1 在gitbash中执行ssh-keygen</p>
+
+<pre><code>   $ ssh-keygen -t rsa -C &quot;yourname@xxx.com&quot;   
+</code></pre>
+
+<p>7.2 打开 C:\Users\username.ssh\id_rsa.pub，复制字符串。
+   7.3 登录<a href="http://github.com">http://github.com</a> 。点击右上角用户图片右边小三角，打开Settings。
+   <img src="https://idersan.github.com/images/hexoblog/github_setting.jpg" alt="github setting" /><br />
+   7.4 右边菜单点击&raquo;SSH and GPG keys&raquo;-&gt;New SSH key-&gt;title文本框输入文字,key文本框右键粘贴-&gt;保存。
+   <img src="https://idersan.github.com/images/hexoblog/ssh_keys.jpg?width=120 height=100" alt="SSH GPG keys" /></p>
+</blockquote>
+
+<h3 id="0x8-发布项目">0x8 发布项目</h3>
+
+<pre><code>  $ hexo d //github 已更新，在ie中打开 yourname.github.io。
+  $ hexo d -g //如果服务端页面未更新的时候，加-g命令。
+</code></pre>
+
+</div>
+
+
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "c4cd25e250584e1fa12608cb72836d5d",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div>
+  
+
+    <div class="section">
+      <header><div class="title"><b>最近更新</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="https://idersan.github.com/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a>
+          </li>
+        
+          <li>
+          <a href="https://idersan.github.com/post/">Posts</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+    
+    
+      
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title">
+          
+          
+              <b>标签(1)</b></div>          
+          
+          
+          </header>
+        <div class="content">
+          <ul>
+            <li><a href="https://idersan.github.com/tags/hexo">hexo</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+</div>
+      
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">回到顶部</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+  code with <i class='fa fa-heart'></i>
+
+</small>
+</div>
+
+
+    
+<div class="container copyright">
+    <small>
+  &copy; 2017 Copyright 二三
+
+  </small>
+</div>
+
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="" async="async"></script>
+
+<script src="https://idersan.github.com/js/jquery.min.js"></script>
+<script src="https://idersan.github.com/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="https://idersan.github.com/js/popover/angular-storage.min.js"></script>
+
+
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    
+    
+    
+  })();
+  $('#return-to-top').click(function() {      
+    $('body,html').animate({
+        scrollTop : 0                       
+    }, 500);
+});
+</script>
+
+
+<script src="https://idersan.github.com/js/highlight.pack.js"></script>
+<script src="https://idersan.github.com/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  var _gaq=[['_setAccount','UA-99037232-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+var ENABLE_POPOVER =  true ; 
+var EXPIRE_COOKIE =  5 ; 
+var SHOW_MODAL_TIMEOUT =  10000 ; 
+var MOUSE_LEAVE =  true ; 
+var MODAL_SIZE = ""; 
+var POST_URL = "https://zapier.com/hooks/catch/1227563/"; 
+var SIGNUP_HEADER = "Join Our Newsletter";
+var HEADER_IMAGE = "http://placehold.it/1000x600";
+var IMG_DESCRIPTION = "Placeholder image for this popover modal optin form";
+var SIGNUP_TEXT = "Signup today for free and be the first to get notified on new updates.";
+var INPUT_PLACEHOLDER = "Enter your email";
+var SUBMIT_BUTTON = "Subscribe";
+var SUCCESS_MESSAGE = "Thanks for your subscription!";
+var ERROR_MESSAGE = "Submitting form failed!";
+var OPTIN =  true ;
+var COOKIE_NAME = "mycookie1";
+</script>
+<script src="https://idersan.github.com/js/popover/angular-modal-service.min.js"></script>
+<script src="https://idersan.github.com/js/angular-ismobile.min.js"></script>
+<script src="https://idersan.github.com/js/popover/popover.min.js"></script>
+
+  </body>
+</html>
+
