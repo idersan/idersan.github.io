@@ -1,34 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 二三</title>
-    <link>https://idersan.github.io/post/</link>
-    <description>Recent content in Posts on 二三</description>
+    <title>Pages on 二三</title>
+    <link>https://idersan.github.io/categories/pages/</link>
+    <description>Recent content in Pages on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <managingEditor>idersan@outlook.com (二三)</managingEditor>
     <webMaster>idersan@outlook.com (二三)</webMaster>
     <copyright>(c) 2017 Copyright 二三</copyright>
-    <lastBuildDate>Wed, 31 May 2017 10:41:55 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 May 2017 21:37:26 +0800</lastBuildDate>
     
-	<atom:link href="https://idersan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://idersan.github.io/categories/pages/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Go入门_一</title>
-      <link>https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</link>
-      <pubDate>Wed, 31 May 2017 10:41:55 +0800</pubDate>
-      <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</guid>
-      <description>学习资料 http://docs.plhwin.com/gopl-zh/
-A 开发环境搭建 0x1 安装GoSDK  Windows系统下载 https://storage.googleapis.com/golang/go1.8.3.windows-amd64.msi 需要翻墙。
- 0x2 本地环境变量配  GOBIN=C:\Go\bin
-GOROOT=C:\Go
-GOPATH=C:\GoWrokspaces
-PATH= ;C:\Go\bin;C:\GoWorkspaces\bin
- 0x3 安装开发IDE  JetBrains Goglang https://www.jetbrains.com/go/
-编辑go应用运行环境 设置应用运行main 文件  B 开发基础语法 0x1 函数参数的&amp;quot;值传递&amp;quot;和&amp;quot;引用传递&amp;quot; type Emplyee struct { Name string Age int Status string Wallet int } func healthCheckup(emplyee Emplyee) { emplyee.Status = &amp;quot;Do Health Checkup&amp;quot; emplyee.Wallet=emplyee.Wallet-50 fmt.Printf(&amp;quot;%s 正在做体检 花费了50 还剩余额%d\n&amp;quot;,emplyee.Name,emplyee.Wallet) } func financeRoom(emplyee *Emplyee) { emplyee.Wallet=emplyee.Wallet+1000; fmt.Printf(&amp;quot;%s 领取了工资 领取了1000 还剩余额%d\n&amp;quot;,emplyee.</description>
-    </item>
     
     <item>
       <title>hexo博客搭建</title>

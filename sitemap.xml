@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</loc>
+    <lastmod>2017-05-31T10:41:55+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2017-05-08T21:37:26+08:00</lastmod>
   </url>
@@ -33,7 +38,25 @@
   </url>
   
   <url>
+    <loc>https://idersan.github.io/tags/go/</loc>
+    <lastmod>2017-05-31T10:41:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://idersan.github.io/categories/go%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2017-05-31T10:41:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://idersan.github.io/tags/hexo/</loc>
+    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://idersan.github.io/categories/pages/</loc>
     <lastmod>2017-05-08T21:37:26+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -46,13 +69,13 @@
   
   <url>
     <loc>https://idersan.github.io/post/</loc>
-    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+    <lastmod>2017-05-31T10:41:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://idersan.github.io/tags/</loc>
-    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+    <lastmod>2017-05-31T10:41:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,7 +86,7 @@
   
   <url>
     <loc>https://idersan.github.io/</loc>
-    <lastmod>2017-05-08T21:37:26+08:00</lastmod>
+    <lastmod>2017-05-31T10:41:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   

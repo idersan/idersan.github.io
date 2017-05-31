@@ -5,36 +5,36 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>hexo博客搭建  &middot; 二三</title>
+  <title>Go入门_一  &middot; 二三</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="description" content="" />
+<meta name="description" content="Go入门第一课" />
 
-<meta name="keywords" content="hexo, how to use hexo build a blog, ">
+<meta name="keywords" content="Golang, Go入门, ">
 
 <link rel="author" href="http://plus.google.com/+Myprofile">
 
 
-<meta property="og:title" content="hexo博客搭建  &middot; 二三 ">
+<meta property="og:title" content="Go入门_一  &middot; 二三 ">
 <meta property="og:site_name" content="二三"/>
-<meta property="og:url" content="https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+<meta property="og:url" content="https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/" />
 <meta property="og:locale" content="zh-CN">
 
 
 <meta property="og:type" content="article" />
-<meta property="og:description" content=""/>
-<meta property="og:article:published_time" content="2017-05-08T21:37:26&#43;08:00" />
-<meta property="og:article:modified_time" content="2017-05-08T21:37:26&#43;08:00" />
+<meta property="og:description" content="Go入门第一课"/>
+<meta property="og:article:published_time" content="2017-05-31T10:41:55&#43;08:00" />
+<meta property="og:article:modified_time" content="2017-05-31T10:41:55&#43;08:00" />
 
   
     
-<meta property="og:article:tag" content="hexo">
+<meta property="og:article:tag" content="Golang">
     
-<meta property="og:article:tag" content="how to use hexo build a blog">
+<meta property="og:article:tag" content="Go入门">
     
   
 
@@ -42,9 +42,9 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@Myprofile" />
 <meta name="twitter:creator" content="@Myprofile" />
-<meta name="twitter:title" content="hexo博客搭建" />
-<meta name="twitter:description" content="" />
-<meta name="twitter:url" content="https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+<meta name="twitter:title" content="Go入门_一" />
+<meta name="twitter:description" content="Go入门第一课" />
+<meta name="twitter:url" content="https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/" />
 <meta name="twitter:domain" content="https://idersan.github.io/">
   
 
@@ -52,20 +52,20 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "hexo博客搭建",
+    "headline": "Go入门_一",
     "author": {
       "@type": "Person",
       "name": "http://profiles.google.com/+Myprofile?rel=author"
     },
-    "datePublished": "2017-05-08",
-    "description": "",
-    "wordCount": 222
+    "datePublished": "2017-05-31",
+    "description": "Go入门第一课",
+    "wordCount": 232
   }
 </script>
 
 
 
-<link rel="canonical" href="https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+<link rel="canonical" href="https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://idersan.github.io/touch-icon-144-precomposed.png">
 <link rel="icon" href="https://idersan.github.io/favicon.png">
 <meta name="generator" content="Hugo 0.21-DEV" />
@@ -156,26 +156,28 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
   <div class="text-center">
 
-    <h1>hexo博客搭建
+    <h1>Go入门_一
 </h1>
 
     <div class="metas">
 <small>
   <i class="fa fa-calendar"></i>
-  <time datetime="2017-05-08">8 May, 2017</time>
+  <time datetime="2017-05-31">31 May, 2017</time>
 </small>
 
 
   <small>
+    &middot; by author
+  
   &middot; Read in about 2 min
-  &middot; (222 words)
+  &middot; (232 words)
 </small>
 
 
 <div class="margin-10">
   <i class="fa fa-tags"></i>
   
-  <a href="https://idersan.github.io/tags/hexo" class="label label-primary">hexo</a>
+  <a href="https://idersan.github.io/tags/go" class="label label-primary">Go</a>
   
 
 
@@ -189,142 +191,138 @@
       <div class="content">
   
 
-<p>hexo 博客在windows 10下快速搭建步骤：</p>
+<p><strong>学习资料 <a href="http://docs.plhwin.com/gopl-zh/">http://docs.plhwin.com/gopl-zh/</a></strong></p>
 
-<h3 id="0x1-安装tortoisegit">0x1 安装tortoisegit。</h3>
+<h4 id="a-开发环境搭建">A 开发环境搭建</h4>
 
-<blockquote>
-<p>1.1 新建Repository yourname.github.io。<br />
-  1.2 开通 page 服务。<br />
-  1.3 本地新建index.html(hello world) push到username.github.io</p>
-
-<pre><code class="language-html">  &lt;!DOCTYPE HTML&gt;
-  &lt;html&gt;
-   &lt;head&gt;
-	  &lt;title&gt;yourname's Blog&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-     &lt;h1&gt;Hello World&lt;/h1&gt;
-     &lt;p&gt;I'm hosted with GitHub Paes&lt;/p&gt;
-   &lt;/body&gt;
-  &lt;/html&gt;
-</code></pre>
-
-<p>1.4 访问yourname.github.io 可以看到helloworld。</p>
-</blockquote>
-
-<h3 id="0x2-安装nodejs">0x2 安装nodejs</h3>
+<h6 id="0x1-安装gosdk">0x1 安装GoSDK</h6>
 
 <blockquote>
-<p>2.1 <a href="http://nodejs.org">http://nodejs.org</a> 下载安装文件，点击安装。
-2.2 配置npm的全局模块的存放路径以及cache的路:</p>
-
-<pre><code class="language-bash">  $ npm config set prefix &quot;C:\Program Files\nodejs\node_global&quot; 
-  $ npm config set cache &quot;C:\Program Files\nodejs\node_cache&quot; 
-</code></pre>
-
-<p>2.3 设置环境变量 NODEPATH=C:\Program Files\nodejs\node_global</p>
+<p>Windows系统下载 <a href="https://storage.googleapis.com/golang/go1.8.3.windows-amd64.msi">https://storage.googleapis.com/golang/go1.8.3.windows-amd64.msi</a> 需要翻墙。</p>
 </blockquote>
 
-<h3 id="0x3-安装hexo">0x3 安装hexo</h3>
+<h6 id="0x2-本地环境变量配">0x2 本地环境变量配</h6>
 
 <blockquote>
-<p>3.1 新建一个hexo目录，不带中文，不带空格。
- 3.2 打开git bash，cd到hexo。</p>
-
-<h4 id="方法a-使用默认源安装">方法A 使用默认源安装</h4>
-
-<pre><code>    $ npm install hexo-cli -g 
-</code></pre>
-
-<p>方法A可执行，则忽略以下方法B</p>
-
-<h4 id="方法b-使用淘宝源安装">方法B 使用淘宝源安装</h4>
-
-<pre><code>    $ npm install -g hexo-cli --registry=https://registry.npm.taobao.org 
-    $ cnpm install  //淘宝镜像安装
-    $ npm install hexo --save
-</code></pre>
-
-<p>3.3 查看本地hexo是否安装正确</p>
-
-<pre><code>  $ hexo -v
-  $ hexo init //如果出错忽略，直接输入下一步命令会自动安装需要的组件。
-  $ hexo g
-  $ hexo s //浏览器打开  http://localhost:4000/
-</code></pre>
+<p>GOBIN=C:\Go\bin<br />
+GOROOT=C:\Go<br />
+GOPATH=C:\GoWrokspaces<br />
+PATH= ;C:\Go\bin;C:\GoWorkspaces\bin</p>
 </blockquote>
 
-<h3 id="0x4-修改hexo主题">0x4 修改hexo主题</h3>
+<h6 id="0x3-安装开发ide">0x3 安装开发IDE</h6>
 
 <blockquote>
-<p>在<a href="https://hexo.io/themes/">https://hexo.io/themes/</a> 查找中意的theme项目, 点进去找到 github项目,
-  之后按照theme 提示安装。
-  示例安装 <a href="https://github.com/chaooo/hexo-theme-BlueLake">https://github.com/chaooo/hexo-theme-BlueLake</a></p>
-
-<pre><code class="language-bash">  $ git clone https://github.com/chaooo/hexo-theme-BlueLake.git themes/BlueLake 
-</code></pre>
+<p>JetBrains Goglang <a href="https://www.jetbrains.com/go/">https://www.jetbrains.com/go/</a><br />
+  编辑go应用运行环境
+  <img src="https://idersan.github.io/images/go入门_一/EditConfiguration.jpg" alt="github setting" />
+  设置应用运行main 文件
+  <img src="https://idersan.github.io/images/go入门_一/run_file.jpg" alt="github setting" /></p>
 </blockquote>
 
-<h3 id="0x5-安装完成后分别执行">0x5 安装完成后分别执行</h3>
+<h4 id="b-开发基础语法">B 开发基础语法</h4>
 
-<pre><code>  $ hexo clean
-  $ hexo g
-  $ hexo d
-  $ hexo s //浏览器打开  http://localhost:4000/ 已经是新主题了
+<h6 id="0x1-函数参数的-值传递-和-引用传递">0x1 函数参数的<code>&quot;值传递&quot;</code>和<code>&quot;引用传递&quot;</code></h6>
+
+<pre><code class="language-go">type Emplyee struct {
+	Name   string
+	Age    int
+	Status string
+	Wallet int
+}
+
+func healthCheckup(emplyee Emplyee) {
+	emplyee.Status = &quot;Do Health Checkup&quot;
+	emplyee.Wallet=emplyee.Wallet-50
+	fmt.Printf(&quot;%s 正在做体检 花费了50 还剩余额%d\n&quot;,emplyee.Name,emplyee.Wallet)
+}
+func financeRoom(emplyee *Emplyee)  {
+	emplyee.Wallet=emplyee.Wallet+1000;
+	fmt.Printf(&quot;%s 领取了工资 领取了1000 还剩余额%d\n&quot;,emplyee.Name,emplyee.Wallet)
+}
+
+func main() {
+	var emp = Emplyee{Name: &quot;larry&quot;, Age: 32, Status: &quot;working&quot;,Wallet:100}
+	fmt.Printf(&quot;员工做体检前 %v\n&quot;,emp)
+	healthCheckup(emp)
+	fmt.Printf(&quot;员工做体检后 %v\n&quot;,emp)
+
+	fmt.Printf(&quot;员工领工资前 %v\n&quot;,emp)
+	financeRoom(&amp;emp)
+	fmt.Printf(&quot;员工领工资后 %v\n&quot;,emp)
+
+}
 </code></pre>
-
-<h3 id="0x6-配置deployment">0x6 配置Deployment</h3>
 
 <blockquote>
-<p>6.1 git bash配置身份信息:</p>
-
-<pre><code>  $ git config --global user.name &quot;yourname&quot;
-  $ git config --global user.email &quot;youremail&quot; 
-</code></pre>
-
-<p>6.2 在_config.yml文件中，找到Deployment，然后按照如下修改：</p>
-
-<pre><code>     deploy:
-       type: git
-       repo: git@github.com:yourname/yourname.github.io.git
-     branch: master
-</code></pre>
-
-<pre><code>  上面的四个:对齐且type: repo: branch: 后面有空格.
-</code></pre>
-
-<p>6.3 安装所需插件</p>
-
-<pre><code>  $ npm install hexo-deployer-git --save
-</code></pre>
-
-<p>6.4 发布项目</p>
-
-<pre><code>  $ hexo d //出现错误信息则说明git bash没有配置ssh。
-</code></pre>
+<p>输出<br />
+员工做体检前 {larry 32 working 100}<br />
+larry 正在做体检 花费了50 还剩余额50<br />
+员工做体检后 {larry 32 working 100}<br />
+员工领工资前 {larry 32 working 100}<br />
+larry 领取了工资 领取了1000 还剩余额1100<br />
+员工领工资后 {larry 32 working 1100}</p>
 </blockquote>
 
-<h3 id="0x7-配置ssh">0x7 配置ssh</h3>
+<h6 id="0x2-接口类型定义和实现类">0x2 接口类型定义和实现类</h6>
+
+<pre><code class="language-go">// 定义Service接口，包含两个方法.
+type Service interface {
+	Sum(a, b int) (int, error)
+	Concat(a, b string) (string, error)
+}
+
+// 返回实现Service接口的 basicService
+func NewBasicService() Service {
+	return basicService{}
+}
+//定义一个Service接口的实现结构体
+type basicService struct{}
+
+// 实现Service接口的Sum方法.   
+func (s basicService) Sum(a, b int) (int, error) {
+   ...
+}
+
+// 实现Service接口的Concat方法.
+func (s basicService) Concat(a, b string) (string, error) {
+   ...   
+}
+
+</code></pre>
+
+<h6 id="0x3-匿名函数">0x3 匿名函数</h6>
+
+<pre><code class="language-go">//greetingToWord 的参数为函数类型，参数名称_fGreeting 
+func greetingToWord(_fGreeting func(whom string) string) string{
+	word:=&quot; word &quot;
+	return _fGreeting(word)
+}
+
+func greeting(whom string)string  {
+	return &quot;1 hello &quot;+ whom
+}
+
+func main() {
+	//传递greeting 函数
+	someGreeting := greetingToWord(greeting)
+	fmt.Println(someGreeting)
+
+	//局部实现匿名函数
+	someGreeting =greetingToWord(func(whom string) string {
+		return &quot;2 hello &quot;+whom
+	})
+	fmt.Println(someGreeting)
+	
+}
+
+</code></pre>
 
 <blockquote>
-<p>7.1 在gitbash中执行ssh-keygen</p>
-
-<pre><code>   $ ssh-keygen -t rsa -C &quot;yourname@xxx.com&quot;   
-</code></pre>
-
-<p>7.2 打开 C:\Users\username.ssh\id_rsa.pub，复制字符串。
-   7.3 登录<a href="http://github.com">http://github.com</a> 。点击右上角用户图片右边小三角，打开Settings。
-   <img src="https://idersan.github.io/images/hexoblog/github_setting.jpg" alt="github setting" /><br />
-   7.4 右边菜单点击&raquo;SSH and GPG keys&raquo;-&gt;New SSH key-&gt;title文本框输入文字,key文本框右键粘贴-&gt;保存。
-   <img src="https://idersan.github.io/images/hexoblog/ssh_keys.jpg?width=120 height=100" alt="SSH GPG keys" /></p>
+<p>输出：<br />
+1 hello  word<br />
+2 hello  word</p>
 </blockquote>
-
-<h3 id="0x8-发布项目">0x8 发布项目</h3>
-
-<pre><code>  $ hexo d //github 已更新，在ie中打开 yourname.github.io。
-  $ hexo d -g //如果服务端页面未更新的时候，加-g命令。
-</code></pre>
 
 </div>
 
@@ -335,13 +333,13 @@
   
     <nav><ul class="pager">
     
-
+        <li class="previous">
+          <a href="https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="hexo博客搭建">
+            <span aria-hidden="true">&larr;</span>上一章
+          </a>
+        </li>
     
-      <li class="next">
-        <a href="https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/" title="Go入门_一">
-            下一章 <span aria-hidden="true">&rarr;</span>
-        </a>
-      </li>
+
     
     </ul> </nav>
   
