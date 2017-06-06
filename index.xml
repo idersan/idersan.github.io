@@ -22,11 +22,8 @@
       <guid>https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</guid>
       <description>学习资料 http://docs.plhwin.com/gopl-zh/
 A 开发环境搭建 0x1 安装GoSDK  Windows系统下载 https://storage.googleapis.com/golang/go1.8.3.windows-amd64.msi 需要翻墙。
- 0x2 本地环境变量配  GOBIN=C:\Go\bin
-GOROOT=C:\Go
-GOPATH=C:\GoWrokspaces
-PATH= ;C:\Go\bin;C:\GoWorkspaces\bin
- 0x3 安装开发IDE  JetBrains Goglang https://www.jetbrains.com/go/
+ 0x2 本地环境变量配 GOBIN=C:\Go\bin GOROOT=C:\Go GOPATH=C:\GoWrokspaces PATH= ;C:\Go\bin;C:\GoWorkspaces\bin  GoWorkspaces 目录下需要新建三个文件目录，分别是src,bin,pkg。
+0x3 安装开发IDE  JetBrains Goglang https://www.jetbrains.com/go/
 编辑go应用运行环境 设置应用运行main 文件  B 开发基础语法 0x1 函数参数的&amp;quot;值传递&amp;quot;和&amp;quot;引用传递&amp;quot; type Emplyee struct { Name string Age int Status string Wallet int } func healthCheckup(emplyee Emplyee) { emplyee.Status = &amp;quot;Do Health Checkup&amp;quot; emplyee.Wallet=emplyee.Wallet-50 fmt.Printf(&amp;quot;%s 正在做体检 花费了50 还剩余额%d\n&amp;quot;,emplyee.Name,emplyee.Wallet) } func financeRoom(emplyee *Emplyee) { emplyee.Wallet=emplyee.Wallet+1000; fmt.Printf(&amp;quot;%s 领取了工资 领取了1000 还剩余额%d\n&amp;quot;,emplyee.</description>
     </item>
     
