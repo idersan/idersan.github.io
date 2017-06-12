@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>PostGreSQL Json数据存储和条件查询  &middot; 二三</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="PostGreSQL Json数据存储和条件查询" />
+
+<meta name="keywords" content="sql, postgresqljson, ">
+
+<link rel="author" href="http://plus.google.com/+Myprofile">
+
+
+<meta property="og:title" content="PostGreSQL Json数据存储和条件查询  &middot; 二三 ">
+<meta property="og:site_name" content="二三"/>
+<meta property="og:url" content="https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" />
+<meta property="og:locale" content="zh-CN">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="PostGreSQL Json数据存储和条件查询"/>
+<meta property="og:article:published_time" content="2017-06-12T14:53:27&#43;08:00" />
+<meta property="og:article:modified_time" content="2017-06-12T14:53:27&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="sql">
+    
+<meta property="og:article:tag" content="postgresqljson">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Myprofile" />
+<meta name="twitter:creator" content="@Myprofile" />
+<meta name="twitter:title" content="PostGreSQL Json数据存储和条件查询" />
+<meta name="twitter:description" content="PostGreSQL Json数据存储和条件查询" />
+<meta name="twitter:url" content="https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" />
+<meta name="twitter:domain" content="https://idersan.github.io/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "PostGreSQL Json数据存储和条件查询",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+Myprofile?rel=author"
+    },
+    "datePublished": "2017-06-12",
+    "description": "PostGreSQL Json数据存储和条件查询",
+    "wordCount": 947
+  }
+</script>
+
+
+
+<link rel="canonical" href="https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://idersan.github.io/touch-icon-144-precomposed.png">
+<link rel="icon" href="https://idersan.github.io/favicon.png">
+<meta name="generator" content="Hugo 0.21-DEV" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="https://idersan.github.io/css/bootswatch/paper/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://idersan.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://idersan.github.io/css/style.css">
+
+
+  <link rel="stylesheet" href="https://idersan.github.io/css/highlight/dark.css">
+
+
+</head>
+<body class="map[name:paper]" data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="https://idersan.github.io/">
+            <img alt="二三" src="https://idersan.github.io/images/brandimg.jpg">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+
+              <a href="https://idersan.github.io/post/" >
+                <i class='fa fa-list'></i>
+                博客
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://idersan.github.io/categories/" >
+                <i class='fa fa-folder-open'></i>
+                分类
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://idersan.github.io/tags/" >
+                <i class='fa fa-tags'></i>
+                标签
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://idersan.github.io/page/about-me" >
+                <i class='fa fa-info-circle'></i>
+                关于我
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>PostGreSQL Json数据存储和条件查询
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2017-06-12">12 Jun, 2017</time>
+</small>
+
+
+  <small>
+    &middot; by 二三
+  
+  &middot; Read in about 5 min
+  &middot; (947 words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="https://idersan.github.io/tags/sql" class="label label-primary">sql</a>
+  
+  <a href="https://idersan.github.io/tags/postgresql-json" class="label label-primary">postgresql json</a>
+  
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  
+
+<h4 id="0x1-创建表">0x1 创建表</h4>
+
+<p>创建一张志愿者的数据表,记录每批参加志愿的人员名单。其中人员信息保存在json字段中。</p>
+
+<pre><code class="language-sql">-- ----------------------------
+-- Table structure for volunteer
+-- ----------------------------
+DROP TABLE IF EXISTS &quot;public&quot;.&quot;volunteer&quot;;
+create sequence volunteer_id increment by 1 minvalue 1 no maxvalue start with 1; 
+
+CREATE TABLE &quot;public&quot;.&quot;volunteer&quot; (
+&quot;id&quot; serial NOT NULL,
+&quot;batch&quot; varchar(255) COLLATE &quot;default&quot;,
+&quot;persons&quot; json
+)
+WITH (OIDS=FALSE);
+
+-- ----------------------------
+-- Alter Sequences Owned By 
+-- ----------------------------
+ALTER TABLE &quot;public&quot;.&quot;volunteer&quot; ALTER COLUMN id SET DEFAULT nextval('volunteer_id'); 
+
+-- ----------------------------
+-- Primary Key structure for table jyp
+-- ----------------------------
+ALTER TABLE &quot;public&quot;.&quot;volunteer&quot; ADD PRIMARY KEY (&quot;id&quot;);
+</code></pre>
+
+<p><code>知识点</code>: (1)postgresql中自增长的id创建。 (2)修改表字段语句。 (3)标准sql中table name ,column name双引号。</p>
+
+<h4 id="0x2-插入数据">0x2 插入数据</h4>
+
+<pre><code class="language-sql">INSERT INTO &quot;public&quot;.&quot;volunteer&quot; (&quot;batch&quot;,&quot;persons&quot;) VALUES('第一批名单','{
+    &quot;code&quot;: 0,
+    &quot;data&quot;: {
+        &quot;users&quot;: [
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 1,
+                &quot;Url&quot;: &quot;http://blog.golang.org/crankshaw@20170502235840&quot;,
+                &quot;UserName&quot;: &quot;Crankshaw@20170502235840&quot;
+            },
+            {
+                &quot;Age&quot;: 31,
+                &quot;ID&quot;: 2,
+                &quot;Url&quot;: &quot;https://jack.github.io&quot;,
+                &quot;UserName&quot;: &quot;Jack&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 3,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 4,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 5,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 6,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 7,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 8,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 9,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 12,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 13,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 14,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 15,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 16,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 17,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 20,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 21,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 22,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 23,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 24,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 25,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 28,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 29,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 30,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 31,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 32,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 33,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 36,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 37,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 38,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 39,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 40,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 41,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 44,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 45,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 46,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 47,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 48,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 49,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 52,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 53,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 54,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 55,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 56,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 57,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 60,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 61,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 62,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 63,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 64,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 65,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 68,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 69,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 70,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 71,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 72,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 73,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 76,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 77,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 78,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 79,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 80,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 81,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 84,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 85,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 86,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 87,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 88,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 89,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 90,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 91,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 92,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 93,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 94,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 95,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 98,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 99,
+                &quot;Url&quot;: &quot;http://blog.golang.org/cock&quot;,
+                &quot;UserName&quot;: &quot;Cock&quot;
+            },
+            {
+                &quot;Age&quot;: 21,
+                &quot;ID&quot;: 100,
+                &quot;Url&quot;: &quot;http://blog.golang.org/hickinbottom&quot;,
+                &quot;UserName&quot;: &quot;Hickinbottom&quot;
+            },
+            {
+                &quot;Age&quot;: 22,
+                &quot;ID&quot;: 101,
+                &quot;Url&quot;: &quot;http://blog.golang.org/willy&quot;,
+                &quot;UserName&quot;: &quot;Willy&quot;
+            },
+            {
+                &quot;Age&quot;: 25,
+                &quot;ID&quot;: 102,
+                &quot;Url&quot;: &quot;http://blog.golang.org/nutter&quot;,
+                &quot;UserName&quot;: &quot;Nutter&quot;
+            },
+            {
+                &quot;Age&quot;: 33,
+                &quot;ID&quot;: 103,
+                &quot;Url&quot;: &quot;http://blog.golang.org/Pigg&quot;,
+                &quot;UserName&quot;: &quot;Pigg&quot;
+            }
+        ]
+    },
+    &quot;msg&quot;: &quot;Success&quot;
+}
+');
+</code></pre>
+
+<h4 id="0x3-条件查询json内容">0x3 条件查询json内容</h4>
+
+<p>查询年龄大于等于25岁以上的志愿者</p>
+
+<pre><code class="language-sql">SELECT row_number() OVER () as num, obj-&gt;&gt;'UserName' as userName,obj-&gt;'Age' as age
+FROM   &quot;public&quot;.&quot;volunteer&quot; vol, json_array_elements(vol.persons-&gt;'data'-&gt;'users') obj
+WHERE  (obj-&gt;&gt;'Age')::int &gt;= 25;
+</code></pre>
+
+<p><code>知识点</code>: (1)查询结果的的row number生成。 (2)获取json对象中的子对象。 (3)转换json对象属性的数据类型。</p>
+
+</div>
+
+
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="https://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/" title="生成SSL证书">
+            <span aria-hidden="true">&larr;</span>上一章
+          </a>
+        </li>
+    
+
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "c4cd25e250584e1fa12608cb72836d5d",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div>
+  
+
+    <div class="section">
+      <header><div class="title"><b>最近更新</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/">PostGreSQL Json数据存储和条件查询</a>
+          </li>
+        
+          <li>
+          <a href="https://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/">生成SSL证书</a>
+          </li>
+        
+          <li>
+          <a href="https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/">Go入门_一</a>
+          </li>
+        
+          <li>
+          <a href="https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a>
+          </li>
+        
+          <li>
+          <a href="https://idersan.github.io/post/">Posts</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+    
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title">
+          
+              <b>分类(4)</b></div>
+          
+          
+          
+          </header>
+        <div class="content">
+          <ul>
+            <li><a href="https://idersan.github.io/categories/database">database</a></li><li><a href="https://idersan.github.io/categories/go%E5%9F%BA%E7%A1%80">go基础</a></li><li><a href="https://idersan.github.io/categories/pages">pages</a></li><li><a href="https://idersan.github.io/categories/web%E5%AE%89%E5%85%A8">web安全</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title">
+          
+          
+              <b>标签(6)</b></div>          
+          
+          
+          </header>
+        <div class="content">
+          <ul>
+            <li><a href="https://idersan.github.io/tags/go">go</a></li><li><a href="https://idersan.github.io/tags/hexo">hexo</a></li><li><a href="https://idersan.github.io/tags/https">https</a></li><li><a href="https://idersan.github.io/tags/postgresql-json">postgresql-json</a></li><li><a href="https://idersan.github.io/tags/sql">sql</a></li><li><a href="https://idersan.github.io/tags/ssl%E8%AF%81%E4%B9%A6">ssl证书</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+</div>
+      
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">回到顶部</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+         <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+          
+  code with <i class='fa fa-heart'></i>
+
+
+    </small>
+</div>
+
+    
+<div class="container copyright">
+    <small>
+  &copy; 2017 Copyright 二三
+
+  </small>
+</div>
+
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="" async="async"></script>
+
+<script src="https://idersan.github.io/js/jquery.min.js"></script>
+<script src="https://idersan.github.io/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="https://idersan.github.io/js/popover/angular-storage.min.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    
+    
+    
+  })();
+  $('#return-to-top').click(function() {      
+    $('body,html').animate({
+        scrollTop : 0                       
+    }, 500);
+});
+</script>
+
+
+<script src="https://idersan.github.io/js/highlight.pack.js"></script>
+<script src="https://idersan.github.io/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  var _gaq=[['_setAccount','UA-99037232-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+var ENABLE_POPOVER =  true ; 
+var EXPIRE_COOKIE =  5 ; 
+var SHOW_MODAL_TIMEOUT =  10000 ; 
+var MOUSE_LEAVE =  true ; 
+var MODAL_SIZE = ""; 
+var POST_URL = "https://zapier.com/hooks/catch/1227563/"; 
+var SIGNUP_HEADER = "Join Our Newsletter";
+var HEADER_IMAGE = "http://placehold.it/1000x600";
+var IMG_DESCRIPTION = "Placeholder image for this popover modal optin form";
+var SIGNUP_TEXT = "Signup today for free and be the first to get notified on new updates.";
+var INPUT_PLACEHOLDER = "Enter your email";
+var SUBMIT_BUTTON = "Subscribe";
+var SUCCESS_MESSAGE = "Thanks for your subscription!";
+var ERROR_MESSAGE = "Submitting form failed!";
+var OPTIN =  true ;
+var COOKIE_NAME = "mycookie1";
+</script>
+<script src="https://idersan.github.io/js/popover/angular-modal-service.min.js"></script>
+<script src="https://idersan.github.io/js/angular-ismobile.min.js"></script>
+<script src="https://idersan.github.io/js/popover/popover.min.js"></script>
+
+  </body>
+</html>
+
