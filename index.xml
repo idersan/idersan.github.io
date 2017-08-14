@@ -9,10 +9,32 @@
     <managingEditor>idersan@outlook.com (二三)</managingEditor>
     <webMaster>idersan@outlook.com (二三)</webMaster>
     <copyright>(c) 2017 Copyright 二三</copyright>
-    <lastBuildDate>Mon, 12 Jun 2017 14:53:27 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Aug 2017 16:41:50 +0800</lastBuildDate>
     
 	<atom:link href="https://idersan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cygwin环境下载android源码</title>
+      <link>https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/</link>
+      <pubDate>Mon, 14 Aug 2017 16:41:50 +0800</pubDate>
+      <author>idersan@outlook.com (二三)</author>
+      <guid>https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/</guid>
+      <description>cygwin 环境准备 打开http://www.cygwin.com/ 下载set-x86_64.exe。安装时选择国内镜像 http://mirrors.163.com。
+cygwin 安装时选择所有开发者选项。其它需要用到的工具有curl，vim，git 也需要全部选中安装。
+android 源码下载配置 清华大学镜像安装教程 https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/
+建立当前用户的bin目录 mkdir ~/bin
+建立源码存放的目录 在e盘下的的android目录
+mkdir /cygdrive/e/android cd /cygdrive/e/android  使用git clone下载 repo
+git clone https://aosp.tuna.tsinghua.edu.cn/android/git-repo.git/  把git中的repo下载执行文件拷贝到用户的 bin目录中
+cp git-repo/repo ~/bin/ chmod a+x ~/bin/repo  建立一个.repo目录，并且把git-repo重名为repo移动到该目录下
+mkdir .repo mv -r git-repo .repo/repo  打开bash
+vim ~/.bashrc  在最后一行追加，repo 的镜像地址
+export REPO_URL=&#39;https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/&#39; export PATH=~/bin:$PATH  更新环境变量，使其立即生效
+source ~/.bashrc  初始化仓库,查看各个版本号
+repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest  初始化指定同步版本号
+repo init -u https://aosp.</description>
+    </item>
     
     <item>
       <title>PostGreSQL Json数据存储和条件查询</title>
@@ -21,7 +43,7 @@
       <author>idersan@outlook.com (二三)</author>
       <guid>https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</guid>
       <description>0x1 创建表 创建一张志愿者的数据表,记录每批参加志愿活动的人员名单。其中人员信息保存在json字段中。
--- ---------------------------- -- Table structure for volunteer -- ---------------------------- DROP TABLE IF EXISTS &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot;; create sequence volunteer_id increment by 1 minvalue 1 no maxvalue start with 1; CREATE TABLE &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot; ( &amp;quot;id&amp;quot; serial NOT NULL, &amp;quot;batch&amp;quot; varchar(255) COLLATE &amp;quot;default&amp;quot;, &amp;quot;persons&amp;quot; json ) WITH (OIDS=FALSE); -- ---------------------------- -- Alter Sequences Owned By -- ---------------------------- ALTER TABLE &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot; ALTER COLUMN id SET DEFAULT nextval(&#39;volunteer_id&#39;); -- ---------------------------- -- Primary Key structure for table jyp -- ---------------------------- ALTER TABLE &amp;quot;public&amp;quot;.</description>
+-- ---------------------------- -- Table structure for volunteer -- ---------------------------- DROP TABLE IF EXISTS &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot;; create sequence volunteer_id increment by 1 minvalue 1 no maxvalue start with 1; CREATE TABLE &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot; ( &amp;quot;id&amp;quot; serial NOT NULL, &amp;quot;batch&amp;quot; varchar(255) COLLATE &amp;quot;default&amp;quot;, &amp;quot;persons&amp;quot; json ) WITH (OIDS=FALSE); -- ---------------------------- -- Alter Sequences Owned By -- ---------------------------- ALTER TABLE &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot; ALTER COLUMN id SET DEFAULT nextval(&#39;volunteer_id&#39;); -- ---------------------------- -- Primary Key structure for table volunteer -- ---------------------------- ALTER TABLE &amp;quot;public&amp;quot;.</description>
     </item>
     
     <item>
