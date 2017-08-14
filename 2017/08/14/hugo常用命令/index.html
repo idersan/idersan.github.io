@@ -5,40 +5,44 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>  &middot; 二三</title>
+  <title>hugo常用命令  &middot; 二三</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="description" content="" />
+<meta name="description" content="hugo常用命令" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="hugo, ">
 
 <link rel="author" href="http://plus.google.com/+Myprofile">
 
 
-<meta property="og:title" content="  &middot; 二三 ">
+<meta property="og:title" content="hugo常用命令  &middot; 二三 ">
 <meta property="og:site_name" content="二三"/>
-<meta property="og:url" content="https://idersan.github.io/page/about-me/" />
+<meta property="og:url" content="https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
 <meta property="og:locale" content="zh-CN">
 
 
 <meta property="og:type" content="article" />
-<meta property="og:description" content=""/>
-<meta property="og:article:published_time" content="2017-05-05T14:50:40&#43;08:00" />
-<meta property="og:article:modified_time" content="2017-05-05T14:50:40&#43;08:00" />
+<meta property="og:description" content="hugo常用命令"/>
+<meta property="og:article:published_time" content="2017-08-14T17:35:40&#43;08:00" />
+<meta property="og:article:modified_time" content="2017-08-14T17:35:40&#43;08:00" />
 
+  
+    
+<meta property="og:article:tag" content="hugo">
+    
   
 
   
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@Myprofile" />
 <meta name="twitter:creator" content="@Myprofile" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:description" content="" />
-<meta name="twitter:url" content="https://idersan.github.io/page/about-me/" />
+<meta name="twitter:title" content="hugo常用命令" />
+<meta name="twitter:description" content="hugo常用命令" />
+<meta name="twitter:url" content="https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
 <meta name="twitter:domain" content="https://idersan.github.io/">
   
 
@@ -46,20 +50,20 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "",
+    "headline": "hugo常用命令",
     "author": {
       "@type": "Person",
       "name": "http://profiles.google.com/+Myprofile?rel=author"
     },
-    "datePublished": "2017-05-05",
-    "description": "",
-    "wordCount": 2
+    "datePublished": "2017-08-14",
+    "description": "hugo常用命令",
+    "wordCount": 23
   }
 </script>
 
 
 
-<link rel="canonical" href="https://idersan.github.io/page/about-me/" />
+<link rel="canonical" href="https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://idersan.github.io/touch-icon-144-precomposed.png">
 <link rel="icon" href="https://idersan.github.io/favicon.png">
 <meta name="generator" content="Hugo 0.21-DEV" />
@@ -147,23 +151,106 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-9">
-      <header class="container hat">
-  <h1>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>hugo常用命令
 </h1>
 
-</header>
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2017-08-14">14 Aug, 2017</time>
+</small>
+
+
+  <small>
+    &middot; by author
+  
+  &middot; Read in about 1 min
+  &middot; (23 words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="https://idersan.github.io/tags/hugo" class="label label-primary">hugo</a>
+  
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
 
       <div class="content">
   
 
-<h3 id="a-href-mailto-idersan-outlook-com-idersan-outlook-com-a"><a href="mailto:idersan@outlook.com">idersan@outlook.com</a></h3>
+<h1 id="编辑">编辑</h1>
 
-<h3 id="qq-1410478343">QQ:1410478343</h3>
+<p>新生成一篇文章</p>
+
+<pre><code class="language-bash">hugo new post/xxx.md
+</code></pre>
+
+<p>本地调试</p>
+
+<pre><code class="language-bash">hugo server -b localhost --buildDrafts
+</code></pre>
+
+<p>#发布</p>
+
+<p>1执行hugo 发布命令，需要替换本地域名为外网域名，否则发布的应用，外网点击后访问的是内网地址。</p>
+
+<pre><code class="language-bash">hugo -b http://xxx.xxx.com/123 
+</code></pre>
+
+<p>2 当前文件头部draft=true 修改为 draft=false
+3上传public 中生成的静态网页到服务中</p>
 
 </div>
 
 
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/" title="cygwin环境下载android源码">
+            <span aria-hidden="true">&larr;</span>上一章
+          </a>
+        </li>
+    
+
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "c4cd25e250584e1fa12608cb72836d5d",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+</div>
+
+</footer>
+
     </div>
     
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">

@@ -9,10 +9,23 @@
     <managingEditor>idersan@outlook.com (二三)</managingEditor>
     <webMaster>idersan@outlook.com (二三)</webMaster>
     <copyright>(c) 2017 Copyright 二三</copyright>
-    <lastBuildDate>Mon, 14 Aug 2017 16:41:50 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Aug 2017 17:35:40 +0800</lastBuildDate>
     
 	<atom:link href="https://idersan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo常用命令</title>
+      <link>https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 14 Aug 2017 17:35:40 +0800</pubDate>
+      <author>idersan@outlook.com (二三)</author>
+      <guid>https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>编辑 新生成一篇文章
+hugo new post/xxx.md  本地调试
+hugo server -b localhost --buildDrafts  #发布
+1执行hugo 发布命令，需要替换本地域名为外网域名，否则发布的应用，外网点击后访问的是内网地址。
+hugo -b http://xxx.xxx.com/123  2 当前文件头部draft=true 修改为 draft=false 3上传public 中生成的静态网页到服务中</description>
+    </item>
     
     <item>
       <title>cygwin环境下载android源码</title>
