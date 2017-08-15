@@ -21,7 +21,7 @@
 
 <meta property="og:title" content="cygwin环境下载android源码  &middot; 二三 ">
 <meta property="og:site_name" content="二三"/>
-<meta property="og:url" content="https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/" />
+<meta property="og:url" content="http://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/" />
 <meta property="og:locale" content="zh-CN">
 
 
@@ -42,8 +42,8 @@
 <meta name="twitter:creator" content="@Myprofile" />
 <meta name="twitter:title" content="cygwin环境下载android源码" />
 <meta name="twitter:description" content="cygwin环境下载android源码" />
-<meta name="twitter:url" content="https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/" />
-<meta name="twitter:domain" content="https://idersan.github.io/">
+<meta name="twitter:url" content="http://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/" />
+<meta name="twitter:domain" content="http://idersan.github.io/">
   
 
 <script type="application/ld+json">
@@ -57,15 +57,15 @@
     },
     "datePublished": "2017-08-14",
     "description": "cygwin环境下载android源码",
-    "wordCount": 165
+    "wordCount": 252
   }
 </script>
 
 
 
-<link rel="canonical" href="https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://idersan.github.io/touch-icon-144-precomposed.png">
-<link rel="icon" href="https://idersan.github.io/favicon.png">
+<link rel="canonical" href="http://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://idersan.github.io/touch-icon-144-precomposed.png">
+<link rel="icon" href="http://idersan.github.io/favicon.png">
 <meta name="generator" content="Hugo 0.21-DEV" />
 
   <!--[if lt IE 9]>
@@ -75,14 +75,14 @@
 
 
 
-    <link rel="stylesheet" href="https://idersan.github.io/css/bootswatch/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="http://idersan.github.io/css/bootswatch/paper/bootstrap.min.css">
 
 
-<link rel="stylesheet" href="https://idersan.github.io/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://idersan.github.io/css/style.css">
+<link rel="stylesheet" href="http://idersan.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://idersan.github.io/css/style.css">
 
 
-  <link rel="stylesheet" href="https://idersan.github.io/css/highlight/dark.css">
+  <link rel="stylesheet" href="http://idersan.github.io/css/highlight/dark.css">
 
 
 </head>
@@ -99,8 +99,8 @@
         </button>
         
           
-          <a class="navbar-brand-img" href="https://idersan.github.io/">
-            <img alt="二三" src="https://idersan.github.io/images/brandimg.jpg">
+          <a class="navbar-brand-img" href="http://idersan.github.io/">
+            <img alt="二三" src="http://idersan.github.io/images/brandimg.jpg">
             
           </a>
         </div>
@@ -110,7 +110,7 @@
             
             <li class="">
 
-              <a href="https://idersan.github.io/post/" >
+              <a href="http://idersan.github.io/post/" >
                 <i class='fa fa-list'></i>
                 博客
               </a>
@@ -118,7 +118,7 @@
             
             <li class="">
 
-              <a href="https://idersan.github.io/categories/" >
+              <a href="http://idersan.github.io/categories/" >
                 <i class='fa fa-folder-open'></i>
                 分类
               </a>
@@ -126,7 +126,7 @@
             
             <li class="">
 
-              <a href="https://idersan.github.io/tags/" >
+              <a href="http://idersan.github.io/tags/" >
                 <i class='fa fa-tags'></i>
                 标签
               </a>
@@ -134,7 +134,7 @@
             
             <li class="">
 
-              <a href="https://idersan.github.io/page/about-me" >
+              <a href="http://idersan.github.io/page/about-me" >
                 <i class='fa fa-info-circle'></i>
                 关于我
               </a>
@@ -167,15 +167,15 @@
   <small>
     &middot; by author
   
-  &middot; Read in about 1 min
-  &middot; (165 words)
+  &middot; Read in about 2 min
+  &middot; (252 words)
 </small>
 
 
 <div class="margin-10">
   <i class="fa fa-tags"></i>
   
-  <a href="https://idersan.github.io/tags/android" class="label label-primary">android</a>
+  <a href="http://idersan.github.io/tags/android" class="label label-primary">android</a>
   
 
 
@@ -306,6 +306,35 @@ export PATH=~/bin:$PATH
 <pre><code class="language-bash">repo sync
 </code></pre>
 
+<p>同步源码的时候会出现一个错误</p>
+
+<pre><code>error: unable to create file tests/P_str_escape/str\\escape.rs: No such file or directory
+Traceback (most recent call last):
+  File &quot;/cygdrive/e/androidsrc/.repo/repo/main.py&quot;, line 531, in &lt;module&gt;
+    _Main(sys.argv[1:])
+  File &quot;/cygdrive/e/androidsrc/.repo/repo/main.py&quot;, line 507, in _Main
+    result = repo._Run(argv) or 0
+  File &quot;/cygdrive/e/androidsrc/.repo/repo/main.py&quot;, line 180, in _Run
+    result = cmd.Execute(copts, cargs)
+  File &quot;/cygdrive/e/androidsrc/.repo/repo/subcmds/sync.py&quot;, line 821, in Execute
+    project.Sync_LocalHalf(syncbuf, force_sync=opt.force_sync)
+  File &quot;/cygdrive/e/androidsrc/.repo/repo/project.py&quot;, line 1327, in Sync_LocalHalf
+    self._InitWorkTree(force_sync=force_sync)
+  File &quot;/cygdrive/e/androidsrc/.repo/repo/project.py&quot;, line 2486, in _InitWorkTree
+    raise GitError(&quot;cannot initialize work tree&quot;)
+error.GitError: cannot initialize work tree
+</code></pre>
+
+<p>解决方案：<br />
+```打开e:\androidsrc\frameworks\compile\slang\tests\P_str_escape 目录，创建str 目录，并在str 目录中创建 escape.rs文件（文件内容为空）。</p>
+
+<pre><code>
+再次执行 
+</code></pre>
+
+<p>repo &ndash;trace sync
+```</p>
+
 </div>
 
 
@@ -316,7 +345,7 @@ export PATH=~/bin:$PATH
     <nav><ul class="pager">
     
         <li class="previous">
-          <a href="https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" title="PostGreSQL Json数据存储和条件查询">
+          <a href="http://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" title="PostGreSQL Json数据存储和条件查询">
             <span aria-hidden="true">&larr;</span>上一章
           </a>
         </li>
@@ -324,7 +353,7 @@ export PATH=~/bin:$PATH
 
     
       <li class="next">
-        <a href="https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="hugo常用命令">
+        <a href="http://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="hugo常用命令">
             下一章 <span aria-hidden="true">&rarr;</span>
         </a>
       </li>
@@ -364,31 +393,31 @@ export PATH=~/bin:$PATH
         <ul>
         
           <li>
-          <a href="https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">hugo常用命令</a>
+          <a href="http://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">hugo常用命令</a>
           </li>
         
           <li>
-          <a href="https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/">cygwin环境下载android源码</a>
+          <a href="http://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/">cygwin环境下载android源码</a>
           </li>
         
           <li>
-          <a href="https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/">PostGreSQL Json数据存储和条件查询</a>
+          <a href="http://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/">PostGreSQL Json数据存储和条件查询</a>
           </li>
         
           <li>
-          <a href="https://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/">生成SSL证书</a>
+          <a href="http://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/">生成SSL证书</a>
           </li>
         
           <li>
-          <a href="https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/">Go入门_一</a>
+          <a href="http://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/">Go入门_一</a>
           </li>
         
           <li>
-          <a href="https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a>
+          <a href="http://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a>
           </li>
         
           <li>
-          <a href="https://idersan.github.io/post/">Posts</a>
+          <a href="http://idersan.github.io/post/">Posts</a>
           </li>
         
         </ul>
@@ -408,7 +437,7 @@ export PATH=~/bin:$PATH
           </header>
         <div class="content">
           <ul>
-            <li><a href="https://idersan.github.io/categories/pages">pages</a></li><li><a href="https://idersan.github.io/categories/android">android</a></li><li><a href="https://idersan.github.io/categories/database">database</a></li><li><a href="https://idersan.github.io/categories/go%E5%9F%BA%E7%A1%80">go基础</a></li><li><a href="https://idersan.github.io/categories/web%E5%AE%89%E5%85%A8">web安全</a></li>
+            <li><a href="http://idersan.github.io/categories/pages">pages</a></li><li><a href="http://idersan.github.io/categories/android">android</a></li><li><a href="http://idersan.github.io/categories/database">database</a></li><li><a href="http://idersan.github.io/categories/go%E5%9F%BA%E7%A1%80">go基础</a></li><li><a href="http://idersan.github.io/categories/web%E5%AE%89%E5%85%A8">web安全</a></li>
           </ul>
         </div>
       </div>
@@ -426,7 +455,7 @@ export PATH=~/bin:$PATH
           </header>
         <div class="content">
           <ul>
-            <li><a href="https://idersan.github.io/tags/android">android</a></li><li><a href="https://idersan.github.io/tags/go">go</a></li><li><a href="https://idersan.github.io/tags/hexo">hexo</a></li><li><a href="https://idersan.github.io/tags/https">https</a></li><li><a href="https://idersan.github.io/tags/hugo">hugo</a></li><li><a href="https://idersan.github.io/tags/postgresql-json">postgresql-json</a></li><li><a href="https://idersan.github.io/tags/sql">sql</a></li><li><a href="https://idersan.github.io/tags/ssl%E8%AF%81%E4%B9%A6">ssl证书</a></li>
+            <li><a href="http://idersan.github.io/tags/android">android</a></li><li><a href="http://idersan.github.io/tags/go">go</a></li><li><a href="http://idersan.github.io/tags/hexo">hexo</a></li><li><a href="http://idersan.github.io/tags/https">https</a></li><li><a href="http://idersan.github.io/tags/hugo">hugo</a></li><li><a href="http://idersan.github.io/tags/postgresql-json">postgresql-json</a></li><li><a href="http://idersan.github.io/tags/sql">sql</a></li><li><a href="http://idersan.github.io/tags/ssl%E8%AF%81%E4%B9%A6">ssl证书</a></li>
           </ul>
         </div>
       </div>
@@ -491,10 +520,10 @@ export PATH=~/bin:$PATH
 
 <script src="//load.sumome.com/" data-sumo-site-id="" async="async"></script>
 
-<script src="https://idersan.github.io/js/jquery.min.js"></script>
-<script src="https://idersan.github.io/js/bootstrap.min.js"></script>
+<script src="http://idersan.github.io/js/jquery.min.js"></script>
+<script src="http://idersan.github.io/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-<script src="https://idersan.github.io/js/popover/angular-storage.min.js"></script>
+<script src="http://idersan.github.io/js/popover/angular-storage.min.js"></script>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
@@ -517,8 +546,8 @@ export PATH=~/bin:$PATH
 </script>
 
 
-<script src="https://idersan.github.io/js/highlight.pack.js"></script>
-<script src="https://idersan.github.io/js/site.js"></script>
+<script src="http://idersan.github.io/js/highlight.pack.js"></script>
+<script src="http://idersan.github.io/js/site.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 
@@ -547,9 +576,9 @@ var ERROR_MESSAGE = "Submitting form failed!";
 var OPTIN =  true ;
 var COOKIE_NAME = "mycookie1";
 </script>
-<script src="https://idersan.github.io/js/popover/angular-modal-service.min.js"></script>
-<script src="https://idersan.github.io/js/angular-ismobile.min.js"></script>
-<script src="https://idersan.github.io/js/popover/popover.min.js"></script>
+<script src="http://idersan.github.io/js/popover/angular-modal-service.min.js"></script>
+<script src="http://idersan.github.io/js/angular-ismobile.min.js"></script>
+<script src="http://idersan.github.io/js/popover/popover.min.js"></script>
 
   </body>
 </html>

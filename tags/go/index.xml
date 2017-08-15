@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on 二三</title>
-    <link>https://idersan.github.io/tags/go/</link>
+    <link>http://idersan.github.io/tags/go/</link>
     <description>Recent content in Go on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Wed, 31 May 2017 10:41:55 +0800</lastBuildDate>
     
-	<atom:link href="https://idersan.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://idersan.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Go入门_一</title>
-      <link>https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</link>
+      <link>http://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</link>
       <pubDate>Wed, 31 May 2017 10:41:55 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</guid>
+      <guid>http://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</guid>
       <description>学习资料 http://docs.plhwin.com/gopl-zh/
 A 开发环境搭建 0x1 安装GoSDK  Windows系统下载 https://storage.googleapis.com/golang/go1.8.3.windows-amd64.msi 需要翻墙。
  0x2 本地环境变量配 GOBIN=C:\Go\bin GOROOT=C:\Go GOPATH=C:\GoWrokspaces PATH= ;C:\Go\bin;C:\GoWorkspaces\bin  GoWorkspaces 目录下需要新建三个文件目录，分别是src,bin,pkg。

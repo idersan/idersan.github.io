@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on 二三</title>
-    <link>https://idersan.github.io/categories/pages/</link>
+    <link>http://idersan.github.io/categories/pages/</link>
     <description>Recent content in Pages on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Mon, 14 Aug 2017 17:35:40 +0800</lastBuildDate>
     
-	<atom:link href="https://idersan.github.io/categories/pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://idersan.github.io/categories/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hugo常用命令</title>
-      <link>https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>http://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Mon, 14 Aug 2017 17:35:40 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>编辑 新生成一篇文章
 hugo new post/xxx.md  本地调试
 hugo server -b localhost --buildDrafts  发布 1 执行hugo 发布命令，需要替换本地域名为外网域名，否则发布的应用，外网点击后访问的是内网地址。
@@ -29,10 +29,10 @@ hugo -b http://xxx.xxx.com/123  2 当前文件头部draft=true 修改为 draft=f
     
     <item>
       <title>hexo博客搭建</title>
-      <link>https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <link>http://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Mon, 08 May 2017 21:37:26 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <guid>http://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
       <description>hexo 博客在windows 10下快速搭建步骤：
 0x1 安装tortoisegit。  1.1 新建Repository yourname.github.io。
 1.2 开通 page 服务。

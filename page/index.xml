@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on 二三</title>
-    <link>https://idersan.github.io/page/</link>
+    <link>http://idersan.github.io/page/</link>
     <description>Recent content in Pages on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,42 +11,42 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Fri, 05 May 2017 14:55:07 +0800</lastBuildDate>
     
-	<atom:link href="https://idersan.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://idersan.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Disclaimer</title>
-      <link>https://idersan.github.io/page/disclaimer/</link>
+      <link>http://idersan.github.io/page/disclaimer/</link>
       <pubDate>Fri, 05 May 2017 14:55:07 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/page/disclaimer/</guid>
+      <guid>http://idersan.github.io/page/disclaimer/</guid>
       <description>Disclaimer  Your disclaimer text here NOTE:Some information in this website might be copied from other websites. If you see something is your copyright or something should not belong here, please feel free to contact me. I will remove necessary parts.     </description>
     </item>
     
     <item>
       <title>Disclaimer</title>
-      <link>https://idersan.github.io/page/terms/</link>
+      <link>http://idersan.github.io/page/terms/</link>
       <pubDate>Fri, 05 May 2017 14:55:07 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/page/terms/</guid>
+      <guid>http://idersan.github.io/page/terms/</guid>
       <description> Headline LICENSE  Unless otherwise mentioned code from this blog can used as per MIT or Apache 2.0 terms.     </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://idersan.github.io/page/license/</link>
+      <link>http://idersan.github.io/page/license/</link>
       <pubDate>Fri, 05 May 2017 14:51:49 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/page/license/</guid>
+      <guid>http://idersan.github.io/page/license/</guid>
       <description>LICENSE  Unless otherwise mentioned code from this blog can used as per MIT or Apache 2.0 license.     </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://idersan.github.io/page/about-me/</link>
+      <link>http://idersan.github.io/page/about-me/</link>
       <pubDate>Fri, 05 May 2017 14:50:40 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/page/about-me/</guid>
+      <guid>http://idersan.github.io/page/about-me/</guid>
       <description> idersan@outlook.com QQ:1410478343 </description>
     </item>
     
