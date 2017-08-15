@@ -35,18 +35,11 @@ hugo -b http://xxx.xxx.com/123  2 当前文件头部draft=true 修改为 draft=f
       <guid>https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/</guid>
       <description>cygwin 环境准备 打开http://www.cygwin.com/ 下载set-x86_64.exe。安装时选择国内镜像 http://mirrors.163.com。
 cygwin 安装时选择所有开发者选项。其它需要用到的工具有curl，vim，git 也需要全部选中安装。
-android 源码下载配置 清华大学镜像安装教程 https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/
-建立当前用户的bin目录 mkdir ~/bin
-建立源码存放的目录 在e盘下的的android目录
-mkdir /cygdrive/e/android cd /cygdrive/e/android  使用git clone下载 repo
-git clone https://aosp.tuna.tsinghua.edu.cn/android/git-repo.git/  把git中的repo下载执行文件拷贝到用户的 bin目录中
-cp git-repo/repo ~/bin/ chmod a+x ~/bin/repo  建立一个.repo目录，并且把git-repo重名为repo移动到该目录下
-mkdir .repo mv -r git-repo .repo/repo  打开bash
-vim ~/.bashrc  在最后一行追加，repo 的镜像地址
-export REPO_URL=&#39;https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/&#39; export PATH=~/bin:$PATH  更新环境变量，使其立即生效
-source ~/.bashrc  初始化仓库,查看各个版本号
-repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest  初始化指定同步版本号
-repo init -u https://aosp.</description>
+curl ssl证书验证: 请求一个https 的api服务，看是否正常返回json数据
+curl -i https://api.github.com/users/octocat/orgs  如果返回
+curl: (77) error setting certificate verify locations: CAfile: C:\ruby\cacert.pem CApath: none  则执行以下命令
+echo &#39;cacert=/etc/ssl/certs/ca-bundle.crt&#39; &amp;gt; ~/.curlrc  再次请求api后，无错误提示，会正确返回json数据
+HTTP/1.1 200 OK Date: Tue, 15 Aug 2017 01:49:31 GMT Content-Type: application/json; charset=utf-8 Content-Length: 5 Server: GitHub.com Status: 200 OK X-RateLimit-Limit: 60 X-RateLimit-Remaining: 57 X-RateLimit-Reset: 1502764991 Cache-Control: public, max-age=60, s-maxage=60 Vary: Accept ETag: &amp;quot;98f0c1b396a4e5d54f4d5fe561d54b44&amp;quot; X-GitHub-Media-Type: github.</description>
     </item>
     
     <item>

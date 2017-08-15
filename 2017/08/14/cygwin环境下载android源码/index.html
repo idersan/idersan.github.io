@@ -57,7 +57,7 @@
     },
     "datePublished": "2017-08-14",
     "description": "cygwin环境下载android源码",
-    "wordCount": 69
+    "wordCount": 165
   }
 </script>
 
@@ -168,7 +168,7 @@
     &middot; by author
   
   &middot; Read in about 1 min
-  &middot; (69 words)
+  &middot; (165 words)
 </small>
 
 
@@ -194,6 +194,56 @@
 <p>打开<a href="http://www.cygwin.com/">http://www.cygwin.com/</a> 下载set-x86_64.exe。安装时选择国内镜像 <a href="http://mirrors.163.com。">http://mirrors.163.com。</a></p>
 
 <p>cygwin 安装时选择所有开发者选项。其它需要用到的工具有curl，vim，git 也需要全部选中安装。</p>
+
+<h3 id="curl-ssl证书验证">curl ssl证书验证:</h3>
+
+<p>请求一个https 的api服务，看是否正常返回json数据</p>
+
+<pre><code class="language-bash">curl -i https://api.github.com/users/octocat/orgs
+</code></pre>
+
+<p>如果返回</p>
+
+<pre><code>curl: (77) error setting certificate verify locations:
+  CAfile: C:\ruby\cacert.pem
+  CApath: none
+</code></pre>
+
+<p>则执行以下命令</p>
+
+<pre><code>echo 'cacert=/etc/ssl/certs/ca-bundle.crt' &gt; ~/.curlrc
+</code></pre>
+
+<p>再次请求api后，无错误提示，会正确返回json数据</p>
+
+<pre><code>HTTP/1.1 200 OK
+Date: Tue, 15 Aug 2017 01:49:31 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 5
+Server: GitHub.com
+Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 57
+X-RateLimit-Reset: 1502764991
+Cache-Control: public, max-age=60, s-maxage=60
+Vary: Accept
+ETag: &quot;98f0c1b396a4e5d54f4d5fe561d54b44&quot;
+X-GitHub-Media-Type: github.v3; format=json
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-Runtime-rack: 0.013540
+Vary: Accept-Encoding
+X-GitHub-Request-Id: C473:DA1A:1DE4A30:2E84DF1:59925328
+[
+
+]
+
+</code></pre>
 
 <h1 id="android-源码下载配置">android 源码下载配置</h1>
 
