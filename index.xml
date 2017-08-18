@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>二三</title>
-    <link>http://idersan.github.io/</link>
+    <link>https://idersan.github.io/</link>
     <description>Recent content on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Mon, 14 Aug 2017 17:35:40 +0800</lastBuildDate>
     
-	<atom:link href="http://idersan.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://idersan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hugo常用命令</title>
-      <link>http://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Mon, 14 Aug 2017 17:35:40 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>编辑 新生成一篇文章
 hugo new post/xxx.md  本地调试
 hugo server -b localhost --buildDrafts  发布 1 执行hugo 发布命令，需要替换本地域名为外网域名，否则发布的应用，外网点击后访问的是内网地址。
@@ -29,10 +29,10 @@ hugo -b http://xxx.xxx.com/123  2 当前文件头部draft=true 修改为 draft=f
     
     <item>
       <title>cygwin环境下载android源码</title>
-      <link>http://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/</link>
+      <link>https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/</link>
       <pubDate>Mon, 14 Aug 2017 16:41:50 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/</guid>
+      <guid>https://idersan.github.io/2017/08/14/cygwin%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BD%BDandroid%E6%BA%90%E7%A0%81/</guid>
       <description>cygwin 环境准备 打开http://www.cygwin.com/ 下载set-x86_64.exe。安装时选择国内镜像 http://mirrors.163.com。
 cygwin 安装时选择所有开发者选项。其它需要用到的工具有curl，vim，git 也需要全部选中安装。
 curl ssl证书验证: 请求一个https 的api服务，看是否正常返回json数据
@@ -44,30 +44,30 @@ HTTP/1.1 200 OK Date: Tue, 15 Aug 2017 01:49:31 GMT Content-Type: application/js
     
     <item>
       <title>PostGreSQL Json数据存储和条件查询</title>
-      <link>http://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</link>
+      <link>https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</link>
       <pubDate>Mon, 12 Jun 2017 14:53:27 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</guid>
+      <guid>https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</guid>
       <description>0x1 创建表 创建一张志愿者的数据表,记录每批参加志愿活动的人员名单。其中人员信息保存在json字段中。
 -- ---------------------------- -- Table structure for volunteer -- ---------------------------- DROP TABLE IF EXISTS &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot;; create sequence volunteer_id increment by 1 minvalue 1 no maxvalue start with 1; CREATE TABLE &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot; ( &amp;quot;id&amp;quot; serial NOT NULL, &amp;quot;batch&amp;quot; varchar(255) COLLATE &amp;quot;default&amp;quot;, &amp;quot;persons&amp;quot; json ) WITH (OIDS=FALSE); -- ---------------------------- -- Alter Sequences Owned By -- ---------------------------- ALTER TABLE &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot; ALTER COLUMN id SET DEFAULT nextval(&#39;volunteer_id&#39;); -- ---------------------------- -- Primary Key structure for table volunteer -- ---------------------------- ALTER TABLE &amp;quot;public&amp;quot;.</description>
     </item>
     
     <item>
       <title>生成SSL证书</title>
-      <link>http://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/</link>
+      <link>https://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/</link>
       <pubDate>Sun, 11 Jun 2017 18:53:20 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/</guid>
+      <guid>https://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/</guid>
       <description>本文操作平台windows，安装 TortoiseGit后，在其 git bash中执行 openssl。
 0x1 ca 根证书,生成 ca.crt openssl genrsa -out ca.pem 2048 openssl ecparam -genkey -name secp384r1 -out ca.pem openssl req -config conf/ca.cnf -newkey rsa:2048 -x509 -days 3650 -key ca.pem -out ca.crt  conf/ca.cnf [req] req_extensions = v3_req distinguished_name = req_distinguished_name prompt = no [req_distinguished_name] countryName = CN stateOrProvinceName = Beijing localityName = Beijing postalCode = 100022 streetAddress = GuoMaoSanQi organizationName = apfelboymschule organizationalUnitName = Support_CA emailAddress = http.</description>
     </item>
     
     <item>
       <title>Go入门_一</title>
-      <link>http://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</link>
+      <link>https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</link>
       <pubDate>Wed, 31 May 2017 10:41:55 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</guid>
+      <guid>https://idersan.github.io/2017/05/31/go%E5%85%A5%E9%97%A8_%E4%B8%80/</guid>
       <description>学习资料 http://docs.plhwin.com/gopl-zh/
 A 开发环境搭建 0x1 安装GoSDK  Windows系统下载 https://storage.googleapis.com/golang/go1.8.3.windows-amd64.msi 需要翻墙。
  0x2 本地环境变量配 GOBIN=C:\Go\bin GOROOT=C:\Go GOPATH=C:\GoWrokspaces PATH= ;C:\Go\bin;C:\GoWorkspaces\bin  GoWorkspaces 目录下需要新建三个文件目录，分别是src,bin,pkg。
@@ -77,10 +77,10 @@ A 开发环境搭建 0x1 安装GoSDK  Windows系统下载 https://storage.google
     
     <item>
       <title>hexo博客搭建</title>
-      <link>http://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <link>https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Mon, 08 May 2017 21:37:26 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <guid>https://idersan.github.io/2017/05/08/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
       <description>hexo 博客在windows 10下快速搭建步骤：
 0x1 安装tortoisegit。  1.1 新建Repository yourname.github.io。
 1.2 开通 page 服务。
@@ -93,37 +93,37 @@ $ npm config set prefix &amp;quot;C:\Program Files\nodejs\node_global&amp;quot; 
     
     <item>
       <title>Disclaimer</title>
-      <link>http://idersan.github.io/page/disclaimer/</link>
+      <link>https://idersan.github.io/page/disclaimer/</link>
       <pubDate>Fri, 05 May 2017 14:55:07 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/page/disclaimer/</guid>
+      <guid>https://idersan.github.io/page/disclaimer/</guid>
       <description>Disclaimer  Your disclaimer text here NOTE:Some information in this website might be copied from other websites. If you see something is your copyright or something should not belong here, please feel free to contact me. I will remove necessary parts.     </description>
     </item>
     
     <item>
       <title>Disclaimer</title>
-      <link>http://idersan.github.io/page/terms/</link>
+      <link>https://idersan.github.io/page/terms/</link>
       <pubDate>Fri, 05 May 2017 14:55:07 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/page/terms/</guid>
+      <guid>https://idersan.github.io/page/terms/</guid>
       <description> Headline LICENSE  Unless otherwise mentioned code from this blog can used as per MIT or Apache 2.0 terms.     </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://idersan.github.io/page/license/</link>
+      <link>https://idersan.github.io/page/license/</link>
       <pubDate>Fri, 05 May 2017 14:51:49 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/page/license/</guid>
+      <guid>https://idersan.github.io/page/license/</guid>
       <description>LICENSE  Unless otherwise mentioned code from this blog can used as per MIT or Apache 2.0 license.     </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://idersan.github.io/page/about-me/</link>
+      <link>https://idersan.github.io/page/about-me/</link>
       <pubDate>Fri, 05 May 2017 14:50:40 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/page/about-me/</guid>
+      <guid>https://idersan.github.io/page/about-me/</guid>
       <description> idersan@outlook.com QQ:1410478343 </description>
     </item>
     

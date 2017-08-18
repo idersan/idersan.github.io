@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on 二三</title>
-    <link>http://idersan.github.io/categories/database/</link>
+    <link>https://idersan.github.io/categories/database/</link>
     <description>Recent content in Database on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Mon, 12 Jun 2017 14:53:27 +0800</lastBuildDate>
     
-	<atom:link href="http://idersan.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://idersan.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PostGreSQL Json数据存储和条件查询</title>
-      <link>http://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</link>
+      <link>https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</link>
       <pubDate>Mon, 12 Jun 2017 14:53:27 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</guid>
+      <guid>https://idersan.github.io/2017/06/12/postgresql-json%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%92%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/</guid>
       <description>0x1 创建表 创建一张志愿者的数据表,记录每批参加志愿活动的人员名单。其中人员信息保存在json字段中。
 -- ---------------------------- -- Table structure for volunteer -- ---------------------------- DROP TABLE IF EXISTS &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot;; create sequence volunteer_id increment by 1 minvalue 1 no maxvalue start with 1; CREATE TABLE &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot; ( &amp;quot;id&amp;quot; serial NOT NULL, &amp;quot;batch&amp;quot; varchar(255) COLLATE &amp;quot;default&amp;quot;, &amp;quot;persons&amp;quot; json ) WITH (OIDS=FALSE); -- ---------------------------- -- Alter Sequences Owned By -- ---------------------------- ALTER TABLE &amp;quot;public&amp;quot;.&amp;quot;volunteer&amp;quot; ALTER COLUMN id SET DEFAULT nextval(&#39;volunteer_id&#39;); -- ---------------------------- -- Primary Key structure for table volunteer -- ---------------------------- ALTER TABLE &amp;quot;public&amp;quot;.</description>
     </item>

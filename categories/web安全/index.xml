@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web安全 on 二三</title>
-    <link>http://idersan.github.io/categories/web%E5%AE%89%E5%85%A8/</link>
+    <link>https://idersan.github.io/categories/web%E5%AE%89%E5%85%A8/</link>
     <description>Recent content in Web安全 on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Sun, 11 Jun 2017 18:53:20 +0800</lastBuildDate>
     
-	<atom:link href="http://idersan.github.io/categories/web%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://idersan.github.io/categories/web%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>生成SSL证书</title>
-      <link>http://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/</link>
+      <link>https://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/</link>
       <pubDate>Sun, 11 Jun 2017 18:53:20 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/</guid>
+      <guid>https://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90ssl%E8%AF%81%E4%B9%A6/</guid>
       <description>本文操作平台windows，安装 TortoiseGit后，在其 git bash中执行 openssl。
 0x1 ca 根证书,生成 ca.crt openssl genrsa -out ca.pem 2048 openssl ecparam -genkey -name secp384r1 -out ca.pem openssl req -config conf/ca.cnf -newkey rsa:2048 -x509 -days 3650 -key ca.pem -out ca.crt  conf/ca.cnf [req] req_extensions = v3_req distinguished_name = req_distinguished_name prompt = no [req_distinguished_name] countryName = CN stateOrProvinceName = Beijing localityName = Beijing postalCode = 100022 streetAddress = GuoMaoSanQi organizationName = apfelboymschule organizationalUnitName = Support_CA emailAddress = http.</description>
     </item>

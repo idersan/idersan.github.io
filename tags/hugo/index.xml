@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 二三</title>
-    <link>http://idersan.github.io/tags/hugo/</link>
+    <link>https://idersan.github.io/tags/hugo/</link>
     <description>Recent content in Hugo on 二三</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2017 Copyright 二三</copyright>
     <lastBuildDate>Mon, 14 Aug 2017 17:35:40 +0800</lastBuildDate>
     
-	<atom:link href="http://idersan.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://idersan.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hugo常用命令</title>
-      <link>http://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Mon, 14 Aug 2017 17:35:40 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>http://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://idersan.github.io/2017/08/14/hugo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>编辑 新生成一篇文章
 hugo new post/xxx.md  本地调试
 hugo server -b localhost --buildDrafts  发布 1 执行hugo 发布命令，需要替换本地域名为外网域名，否则发布的应用，外网点击后访问的是内网地址。
