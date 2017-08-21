@@ -24,15 +24,6 @@
     </item>
     
     <item>
-      <title>Cygwin</title>
-      <link>https://idersan.github.io/categories/cygwin/</link>
-      <pubDate>Fri, 18 Aug 2017 23:15:49 +0800</pubDate>
-      <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/categories/cygwin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Database</title>
       <link>https://idersan.github.io/categories/database/</link>
       <pubDate>Mon, 12 Jun 2017 14:53:27 +0800</pubDate>
@@ -42,29 +33,20 @@
     </item>
     
     <item>
-      <title>Go基础</title>
-      <link>https://idersan.github.io/categories/go%E5%9F%BA%E7%A1%80/</link>
+      <title>Go</title>
+      <link>https://idersan.github.io/categories/go/</link>
       <pubDate>Fri, 18 Aug 2017 16:21:11 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/categories/go%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://idersan.github.io/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Pages</title>
-      <link>https://idersan.github.io/categories/pages/</link>
-      <pubDate>Mon, 14 Aug 2017 17:35:40 +0800</pubDate>
+      <title>开发wiki</title>
+      <link>https://idersan.github.io/categories/%E5%BC%80%E5%8F%91wiki/</link>
+      <pubDate>Fri, 18 Aug 2017 23:15:49 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/categories/pages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web安全</title>
-      <link>https://idersan.github.io/categories/web%E5%AE%89%E5%85%A8/</link>
-      <pubDate>Sun, 11 Jun 2017 18:53:20 +0800</pubDate>
-      <author>idersan@outlook.com (二三)</author>
-      <guid>https://idersan.github.io/categories/web%E5%AE%89%E5%85%A8/</guid>
+      <guid>https://idersan.github.io/categories/%E5%BC%80%E5%8F%91wiki/</guid>
       <description></description>
     </item>
     
