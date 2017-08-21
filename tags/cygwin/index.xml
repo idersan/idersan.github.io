@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cygwin on 二三</title>
+    <link>https://idersan.github.io/tags/cygwin/</link>
+    <description>Recent content in Cygwin on 二三</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>idersan@outlook.com (二三)</managingEditor>
+    <webMaster>idersan@outlook.com (二三)</webMaster>
+    <copyright>(c) 2017 Copyright 二三</copyright>
+    <lastBuildDate>Fri, 18 Aug 2017 23:15:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://idersan.github.io/tags/cygwin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>安装apt cyg</title>
+      <link>https://idersan.github.io/2017/08/18/%E5%AE%89%E8%A3%85apt-cyg/</link>
+      <pubDate>Fri, 18 Aug 2017 23:15:49 +0800</pubDate>
+      <author>idersan@outlook.com (二三)</author>
+      <guid>https://idersan.github.io/2017/08/18/%E5%AE%89%E8%A3%85apt-cyg/</guid>
+      <description>使用Cygwin安装setup-x86.exe选择安装依赖的工具:
+wget,tar,gawk,bzip2
+之后执行以下安装操作
+$ wget https://raw.githubusercontent.com/transcode-open/apt-cyg/master/apt-cyg &amp;gt; apt-cyg $ chmod +x apt-cyg $ install apt-cyg /bin $ rm apt-cyg // 安装curl测试 $ apt install curl  </description>
+    </item>
+    
+  </channel>
+</rss>

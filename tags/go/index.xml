@@ -9,10 +9,27 @@
     <managingEditor>idersan@outlook.com (二三)</managingEditor>
     <webMaster>idersan@outlook.com (二三)</webMaster>
     <copyright>(c) 2017 Copyright 二三</copyright>
-    <lastBuildDate>Wed, 31 May 2017 10:41:55 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Aug 2017 16:21:11 +0800</lastBuildDate>
     
 	<atom:link href="https://idersan.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GO自签名证书双向认证</title>
+      <link>https://idersan.github.io/2017/08/18/go%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E5%8F%8C%E5%90%91%E8%AE%A4%E8%AF%81/</link>
+      <pubDate>Fri, 18 Aug 2017 16:21:11 +0800</pubDate>
+      <author>idersan@outlook.com (二三)</author>
+      <guid>https://idersan.github.io/2017/08/18/go%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E5%8F%8C%E5%90%91%E8%AE%A4%E8%AF%81/</guid>
+      <description>生成SSL证书  先按照以上操作生成自签名证书。服务端和客户端分别需要引用到的证书如下：
+   服务端证书 客户端证书     ca.crt ca.crt   server.crt client.crt   server.key client.key    服务端  在go中启动一个https 服务，可以调用http.server 对象的 ListenAndServeTLS(certFile, keyFile string)方法。 通过注释和实现代码可以知道，该方法的两个参数分别是证书和私钥。也就是server.crt和server.key。并且同时还从http.server对象中获取了一个TLSConfig。TLSConfig 中设置的是根证书ca.crt。
+ http.server的数据结构：  因此启动一个https server,无其它需求时，简单设置其三个参数即可：
+1. Addr
+2. Handler
+3. TLSConfig
+  Addr 是一个设置服务TCP地址(包括端口号)的字符串。
+ 准备TLSConfig 参数，读取根证书文件。
+  pool := x509.NewCertPool() caCertPath := &amp;quot;ca.crt&amp;quot; caCrt, err := ioutil.ReadFile(caCertPath) if err != nil { fmt.</description>
+    </item>
     
     <item>
       <title>Go入门_一</title>
