@@ -87,7 +87,7 @@ HTTP/1.1 200 OK Date: Tue, 15 Aug 2017 01:49:31 GMT Content-Type: application/js
       <pubDate>Sun, 11 Jun 2017 18:53:20 +0800</pubDate>
       <author>idersan@outlook.com (二三)</author>
       <guid>https://idersan.github.io/2017/06/11/%E7%94%9F%E6%88%90%E8%87%AA%E7%AD%BE%E5%90%8Dssl%E8%AF%81%E4%B9%A6/</guid>
-      <description>本文操作平台windows，安装 TortoiseGit后，在其 git bash中执行 openssl。
+      <description>下载执行文件 本文操作平台windows，安装 TortoiseGit后，在其 git bash中执行 openssl。
 0x1 ca 根证书,生成 ca.crt openssl genrsa -out ca.pem 2048 openssl ecparam -genkey -name secp384r1 -out ca.pem openssl req -config conf/ca.cnf -newkey rsa:2048 -x509 -days 3650 -key ca.pem -out ca.crt  conf/ca.cnf [req] req_extensions = v3_req distinguished_name = req_distinguished_name prompt = no [req_distinguished_name] countryName = CN stateOrProvinceName = Beijing localityName = Beijing postalCode = 100022 streetAddress = GuoMaoSanQi organizationName = apfelboymschule organizationalUnitName = Support_CA emailAddress = http.</description>
     </item>
     
